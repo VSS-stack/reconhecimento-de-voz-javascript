@@ -1,4 +1,4 @@
-const elementoChute = document.getElementById('chute');
+const elementoChute = document.getElementById('chute'); //pegando elemento no html
 
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition; //declarando objeto para o web speech api
 
@@ -8,11 +8,13 @@ recognition.start(); // dando start ao reconhecimento
 
 recognition.addEventListener('result', onSpeak); //lendo o resultado do evento recognition e passando como parametro para a funcao onSpeak
 
+//selecionando parte do evento e colocando em um elemento
 function onSpeak(e) {
     chute = e.results[0][0].transcript;
     exibeChuteNaTela(chute);
 }
 
+//incluindo o elemento no html
 function exibeChuteNaTela(chute) {
     elementoChute.innerHTML = `
         <div>Você disse:</div>
