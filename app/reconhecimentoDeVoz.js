@@ -12,6 +12,7 @@ recognition.addEventListener('result', onSpeak); //lendo o resultado do evento r
 function onSpeak(e) {
     chute = e.results[0][0].transcript;
     exibeChuteNaTela(chute);
+    verificaValorDoChute(chute);
 }
 
 //incluindo o elemento no html
