@@ -15,7 +15,7 @@ function verificaValorDoChute(chute) {
         document.body.innerHTML = `
             <h2>Você acertou!</h2>
             <h3>O número secreto era ${numeroSecreto}</h3>
-        `
+        ` //nesse if termina o jogo pois ele muda a estrutura do html e quebra o fluxo do script
     }else if(numero > numeroSecreto) {
         elementoChute.innerHTML += `<div>O número secreto é menor <i class="fa-solid fa-arrow-down-long"></i></div>`;
     }else {
